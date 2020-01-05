@@ -1,10 +1,10 @@
 open System
 
 let rec capitalizeWords (arr: List<string>) =
-    let upper (c: string) = String.map Char.ToUpper arr.[0]
+    let upper (c: string) = String.map Char.ToUpper c
 
     match arr with
-    | [] -> capitalizeWords arr
+    | [] -> []
     | x :: xs -> (upper x) :: (capitalizeWords xs)
 
 
